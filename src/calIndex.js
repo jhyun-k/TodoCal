@@ -5,9 +5,7 @@ const renderCalendar = () => { //달력 보여주는 함수-------
   const viewMonth = date.getMonth();
 
   //현재 연도와 월 표시-------
-  document.querySelector('.year-month').textContent = `${viewYear}년 ${
-    viewMonth + 1
-  }월`;
+  document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth + 1}월`;
 
   //지난달 마지막날과 이번달 마지막날 ------
   const prevLast = new Date(viewYear, viewMonth, 0); //2022 12 31 토
@@ -20,7 +18,7 @@ const renderCalendar = () => { //달력 보여주는 함수-------
   const TLDay = thisLast.getDay(); // 이번달 마지막 요일 화요일(2)
 
   const prevDates = [];
-  const thisDates = [...Array(TLDate + 1).keys()].slice(1); // 0부터 시작하는걸 1부터 시작하게 해준다  1~31 (1월이니까)
+  const thisDates = [...Array(TLDate+1).keys()].slice(1); // 인덱스는 0부터 시작하므로 TLDate에 +1 해주어 하나가 추가된 배열을 만들고, `slice(1)` 을 이용해 1일부터 마지막날까지의 배열로 만든다. 1~31 (1월이니까)
   const nextDates = [];
 
   //달력 합치기 ----------
@@ -34,15 +32,14 @@ const renderCalendar = () => { //달력 보여주는 함수-------
     nextDates.push(i); // 다음달 날짜 넣어줌 
   }
 
-
-  //이번달 아닌 날짜들 흐리게하기 -----------
   const dates = prevDates.concat(thisDates, nextDates); //지난달이번달다음달 합쳐주기
+
+
   const firstDateIndex = dates.indexOf(1); //이번달 1일의 인덱스 찾기
   const lastDateIndex = dates.lastIndexOf(TLDate); //이번달 막날의 인덱스 찾기
 
   dates.forEach((date, i) => {
-    const condition =
-      i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other'; //date의 인덱스가 이번달 1일 인덱스보다 크거나 같고 막날 인덱스보다 작으면 이번달! 아니면 다른달! 다른달은 opacity 흐리게 해주기 위함
+    const condition = i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other'; //date의 인덱스가 이번달 1일 인덱스보다 크거나 같고 막날 인덱스보다 작으면 이번달! 아니면 다른달! 다른달은 opacity 흐리게 해주기 위함
     dates[i] = `<div class="date"><span class=${condition}>${date}</span></div>`;
   });
 
@@ -64,6 +61,7 @@ const renderCalendar = () => { //달력 보여주는 함수-------
 
 renderCalendar();
 
+
 const prevMonth = () => {
   date.setMonth(date.getMonth() - 1);
   renderCalendar();
@@ -78,3 +76,5 @@ const goToday = () => {
   date = new Date();
   renderCalendar();
 };
+
+

@@ -1,15 +1,15 @@
 let date = new Date();
 
-const renderCalendar = () => {
+const renderCalendar = () => { //달력 보여주는 함수-------
   const viewYear = date.getFullYear();
   const viewMonth = date.getMonth();
 
-  //현재 연도와 월 표시
+  //현재 연도와 월 표시-------
   document.querySelector('.year-month').textContent = `${viewYear}년 ${
     viewMonth + 1
   }월`;
 
-  //지난달 마지막날과 이번달 마지막날
+  //지난달 마지막날과 이번달 마지막날 ------
   const prevLast = new Date(viewYear, viewMonth, 0); //2022 12 31 토
   const thisLast = new Date(viewYear, viewMonth + 1, 0); //2023 1 31 화
 
@@ -23,6 +23,7 @@ const renderCalendar = () => {
   const thisDates = [...Array(TLDate + 1).keys()].slice(1); // 0부터 시작하는걸 1부터 시작하게 해준다  1~31 (1월이니까)
   const nextDates = [];
 
+  //달력 합치기 ----------
   if (PLDay !== 6) {
     // 지난달 마지막 요일이 토요일이 아니면 (요일 시작이 일요일부터니까)
     for (let i = 0; i < PLDay + 1; i++) {
@@ -30,32 +31,32 @@ const renderCalendar = () => {
     }
   }
   for (let i = 1; i < 7 - TLDay; i++) {
-    nextDates.push(i);
+    nextDates.push(i); // 다음달 날짜 넣어줌 
   }
 
-  const dates = prevDates.concat(thisDates, nextDates); //지난달이번달다음달 합쳐주기
-  const firstDateIndex = dates.indexOf(1);
-  const lastDateIndex = dates.lastIndexOf(TLDate);
 
-  console.log(firstDateIndex);
-  console.log(lastDateIndex);
+  //이번달 아닌 날짜들 흐리게하기 -----------
+  const dates = prevDates.concat(thisDates, nextDates); //지난달이번달다음달 합쳐주기
+  const firstDateIndex = dates.indexOf(1); //이번달 1일의 인덱스 찾기
+  const lastDateIndex = dates.lastIndexOf(TLDate); //이번달 막날의 인덱스 찾기
 
   dates.forEach((date, i) => {
     const condition =
-      i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other';
-    dates[
-      i
-    ] = `<div class="date"><span class=${condition}>${date}</span></div>`;
+      i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other'; //date의 인덱스가 이번달 1일 인덱스보다 크거나 같고 막날 인덱스보다 작으면 이번달! 아니면 다른달! 다른달은 opacity 흐리게 해주기 위함
+    dates[i] = `<div class="date"><span class=${condition}>${date}</span></div>`;
   });
 
   document.querySelector('.dates').innerHTML = dates.join('');
 
+
+  //오늘날짜 표시하기 -----------
   const today = new Date();
-  if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
-    for (let date of document.querySelectorAll('.this')) {
-      if (+date.innerText === today.getDate()) {
-        date.classList.add('today');
-        break;
+
+  if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) { //지금 보고있는 달력이 이번년 이번달 달력이면
+    for (let date of document.querySelectorAll('.this')) { //this라는 클래스를 갖고있는 값을 돌려서
+      if (+date.innerText === today.getDate()) { //date의 text가 오늘 날짜와 같으면 (string에 + 붙여줘서 type을 number로 바꿔줌)
+        date.classList.add('today'); // today라는 클래스를 붙여준다
+        break; // 그러고 빠져나와라
       }
     }
   }

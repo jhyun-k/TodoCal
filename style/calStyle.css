@@ -1,43 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.cal {
-  width: 60%;
-  margin: 50px;
-}
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 .year-month {
   font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  color: #3F72AF;
 }
 
-.nav {
-  display: flex;
-  border: 1px solid #333;
-  border-radius: 5px;
-}
-
-.nav-btn {
-  width: 28px;
-  height: 30px;
+.go-prev,.go-next {
   border: none;
   line-height: 34px;
   background-color: transparent;
   cursor: pointer;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .go-today {
-  width: 75px;
-  border-left: 1px solid #333;
-  border-right: 1px solid #333;
+  background-color: #112D4E;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .days {
@@ -48,22 +40,24 @@
 .day {
   width: calc(100% / 7);
   text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+
 }
 
 .dates {
   display: flex;
   flex-flow: row wrap;
-  height: 500px;
-  border-top: 1px solid #333;
-  border-right: 1px solid #333;
+  height: 460px;
 }
 
 .date {
   width: calc(100% / 7);
   padding: 15px;
-  text-align: right;
-  border-bottom: 1px solid #333;
-  border-left: 1px solid #333;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  z-index: 0;
 }
 
 .day:nth-child(7n + 1),
@@ -71,13 +65,9 @@
   color: #d13e3e;
 }
 
-.day:nth-child(7n),
-.date:nth-child(7n) {
-  color: #396ee2;
-}
 
 .other {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .today {
@@ -91,10 +81,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  width: 30px;
-  height: 30px;
+  width: 52px;
+  height: 52px;
   display: block;
-  background-color: #ff0000;
+  background-color: #112D4E;
   border-radius: 50%;
   content: '';
 }

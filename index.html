@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodoCal</title>
-    <link rel="stylesheet" href="style.css">
-    <script src='./src/index.js' defer></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/calStyle.css">
+    <script src='./src/calIndex.js' defer></script>
 </head>
 
 <body>
@@ -19,12 +20,12 @@
         <main>
             <section class='cal'>
                 <div class='header'>
+                    <button class="nav-btn go-prev" onclick='prevMonth()'>&lt;</button>
                     <div class="year-month"></div>
-                    <div class="nav">
-                        <button class="nav-btn go-prev" onclick='prevMonth()'>&lt;</button>
+                    <button class="nav-btn go-next" onclick='nextMonth()'>&gt;</button>
+                        
                         <button class="nav-btn go-today" onclick='goToday()'>Today</button>
-                        <button class="nav-btn go-next" onclick='nextMonth()'>&gt;</button>
-                    </div>
+                        
                 </div>
                 <div class='main'>
                     <div class="days">

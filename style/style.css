@@ -5,7 +5,7 @@
   }
 
   body{
-    background-color: #F9F7F7;
+    background-color: #fefef8;
   }
   header{
     display: flex;
@@ -19,12 +19,15 @@
   }
   .weather{
     width: 10vw;
-    border: 1px solid #333;
+    background-color: #E8E8E8;
     margin: 50px 20px 15px 100px;
+    border-radius: 10px;
   }
   .quote{
     width: 90vw;
-    border: 1px solid #333;
+    background-color: #E8E8E8;
+    border-radius: 10px;
+
     margin: 50px 100px 20px 20px;
   }
 

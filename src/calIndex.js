@@ -77,4 +77,5 @@ const goToday = () => {
   renderCalendar();
 };
 
+/* Date.prototype.setMonth() : setMonth () 메서드는 현재 설정된 연도에 따라 지정된 날짜의 월을 설정할 수 있다 */
 

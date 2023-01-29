@@ -3,9 +3,12 @@ let date = new Date();
 const renderCalendar = () => { //달력 보여주는 함수-------
   const viewYear = date.getFullYear();
   const viewMonth = date.getMonth();
+  const viewDate = date.getDate();
 
   //현재 연도와 월 표시-------
   document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth + 1}월`;
+  document.querySelector('.year-month-date').textContent = `${viewYear}년 ${viewMonth + 1}월 ${viewDate}일`
+
 
   //지난달 마지막날과 이번달 마지막날 ------
   const prevLast = new Date(viewYear, viewMonth, 0); //2022 12 31 토
@@ -49,6 +52,7 @@ const renderCalendar = () => { //달력 보여주는 함수-------
   //오늘날짜 표시하기 -----------
   const today = new Date();
 
+
   if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) { //지금 보고있는 달력이 이번년 이번달 달력이면
     for (let date of document.querySelectorAll('.this')) { //this라는 클래스를 갖고있는 값을 돌려서
       if (+date.innerText === today.getDate()) { //date의 text가 오늘 날짜와 같으면 (string에 + 붙여줘서 type을 number로 바꿔줌)
@@ -58,6 +62,7 @@ const renderCalendar = () => { //달력 보여주는 함수-------
     }
   }
 };
+
 
 renderCalendar();
 

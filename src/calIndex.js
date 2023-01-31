@@ -7,7 +7,6 @@ const renderCalendar = () => { //달력 보여주는 함수-------
 
   //현재 연도와 월 표시-------
   document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth + 1}월`;
-  document.querySelector('.year-month-date').textContent = `${viewYear}년 ${viewMonth + 1}월 ${viewDate}일`
 
 
   //지난달 마지막날과 이번달 마지막날 ------

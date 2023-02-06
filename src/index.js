@@ -83,15 +83,14 @@ const goToday = () => {
 
 /* Date.prototype.setMonth() : setMonth () 메서드는 현재 설정된 연도에 따라 지정된 날짜의 월을 설정할 수 있다 */
 
+const renderTodo = () => {
 
-const viewYear = date.getFullYear();
-const viewMonth = date.getMonth();
-const viewDate = date.getDate();
-
-const viewDay = dates.forEach((el,i)=>{
-  el.addEventListener('click',()=>{
-    
+  const viewDay = dates.forEach((el,i)=>{
+    el.addEventListener('click',()=>{
+      
+    })
   })
-})
+  
+}
 
-document.querySelector('.year-month-date').textContent = `${viewYear}년 ${viewMonth + 1}월 ${viewDate}일`
+

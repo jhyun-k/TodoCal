@@ -85,11 +85,6 @@ const goToday = () => {
 
 const renderTodo = () => {
 
-  const viewDay = dates.forEach((el,i)=>{
-    el.addEventListener('click',()=>{
-      
-    })
-  })
   
 }
 

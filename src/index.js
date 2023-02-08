@@ -62,16 +62,12 @@ const renderCalendar = () => { //달력 보여주는 함수-------
   }
 
 
-  const viewDay = dates.map((item)=>{item.textContent})
+  const viewDay = dates.forEach((item)=>{item.textContent})
 
   const renderTodo = () => {
     document.querySelector('.year-month-date').textContent = `${viewYear}년 ${viewMonth + 1}월 ${viewDay}일`;
   }
-  dates.forEach((item)=>{
-    item.addEventListener('click',()=>{
-      renderTodo()
-    })
-  })
+  renderTodo()
 };
 
 

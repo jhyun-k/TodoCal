@@ -60,6 +60,18 @@ const renderCalendar = () => { //달력 보여주는 함수-------
       }
     }
   }
+
+
+  const viewDay = dates.map((item)=>{item.textContent})
+
+  const renderTodo = () => {
+    document.querySelector('.year-month-date').textContent = `${viewYear}년 ${viewMonth + 1}월 ${viewDay}일`;
+  }
+  dates.forEach((item)=>{
+    item.addEventListener('click',()=>{
+      renderTodo()
+    })
+  })
 };
 
 
@@ -83,9 +95,6 @@ const goToday = () => {
 
 /* Date.prototype.setMonth() : setMonth () 메서드는 현재 설정된 연도에 따라 지정된 날짜의 월을 설정할 수 있다 */
 
-const renderTodo = () => {
 
-  
-}
 
 

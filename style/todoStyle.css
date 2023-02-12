@@ -6,6 +6,9 @@
   }
 
   .wtd{
-    border: none;
-    text-align: center;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background-color: transparent;
+    margin: auto;
   }

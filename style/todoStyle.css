@@ -5,10 +5,15 @@
     color: #3F72AF;
   }
 
+  .todo{
+    display: flex;
+  }
   .wtd{
     border-right: none;
     border-left: none;
     border-top: none;
     background-color: transparent;
     margin: auto;
+
   }
+

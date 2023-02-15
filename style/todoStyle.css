@@ -7,6 +7,8 @@
 
   .todoInput{
     display: flex;
+    margin-top: 350px;
+    padding: 20px;
   }
   .wtd{
     border-right: none;

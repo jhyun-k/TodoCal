@@ -8,3 +8,9 @@
 .quote h3{
     color: cadetblue;
 }
+
+.quote p{
+    color: rgb(57, 93, 95);
+    font-size: 20px;
+    font-weight: bold;
+}

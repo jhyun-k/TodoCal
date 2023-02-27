@@ -7,7 +7,6 @@
 
   .todoInput{
     display: flex;
-    margin-top: 350px;
     padding: 20px;
   }
   .wtd{
@@ -16,6 +15,9 @@
     border-top: none;
     background-color: transparent;
     margin: auto;
-    height: 200px;
+    height: 20px;
   }
 
+.todos li{
+  list-style: none;
+}

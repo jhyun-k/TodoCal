@@ -10,12 +10,13 @@
     padding: 20px;
   }
   .wtd{
-    border-right: none;
+    /* border-right: none;
     border-left: none;
-    border-top: none;
+    border-top: none; */
+    border: 0 0 0 1px;
     background-color: transparent;
     margin: auto;
-    height: 20px;
+    height: 1.25rem;
   }
 
 .todos li{

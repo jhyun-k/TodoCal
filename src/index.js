@@ -1,5 +1,7 @@
 let date = new Date();
 
+let todoDate = 0
+
 const renderCalendar = () => { //달력 보여주는 함수-------
   const viewYear = date.getFullYear();
   const viewMonth = date.getMonth();
@@ -60,6 +62,13 @@ const renderCalendar = () => { //달력 보여주는 함수-------
       }
     }
   }
+
+  dates.forEach((date)=>{
+    date.addEventListener('click',()=>{
+      todoDate = date.innerText
+      console.log(todoDate)
+    })
+  })
 
 };
 

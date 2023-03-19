@@ -47,8 +47,6 @@ const renderCalendar = () => { //달력 보여주는 함수-------
     dates[i] = `<div class="date"><span class=${condition}>${date}</span></div>`;
     const dateInner = date;
     console.log(dateInner)
-    dateInner.forEach((item)=>{console.log(item)})
-
   });
 
   document.querySelector('.dates').innerHTML = dates.join('');

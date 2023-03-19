@@ -8,7 +8,7 @@
     background-color: #fefef8;
   }
   header{
-    display: flex;
+    display: flex; 
     height: 20vh;
   }
 
@@ -20,15 +20,15 @@
   .weather{
     width: 10vw;
     background-color: #E8E8E8;
-    margin: 50px 20px 15px 100px;
+    /* margin: 50px 20px 15px 100px; */
     border-radius: 10px;
   }
   .quote{
-    width: 90vw;
+    width: 80vw;
     background-color: #E8E8E8;
     border-radius: 10px;
 
-    margin: 50px 100px 20px 20px;
+    /* margin: 50px 100px 20px 20px; */
   }
 
   .cal {
@@ -47,3 +47,26 @@
     border-radius: 10px;
   }
   
+
+  .weather{
+    width: 10vw;
+    background-color: cadetblue;
+    height: 20vh;
+}
+
+.quote{
+  margin: auto;
+  padding: 10px;
+  width: 75rem;
+  height: 6.25rem;
+}
+
+.quote h3{
+  color: cadetblue;
+}
+
+.quote p{
+  color: rgb(57, 93, 95);
+  font-size: 18px;
+  font-weight: bold;
+}

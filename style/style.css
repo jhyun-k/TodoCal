@@ -20,7 +20,7 @@
   .weather{
     width: 10vw;
     background-color: #E8E8E8;
-    /* margin: 50px 20px 15px 100px; */
+    margin: 50px 20px 15px 100px;
     border-radius: 10px;
   }
   .quote{
@@ -28,7 +28,7 @@
     background-color: #E8E8E8;
     border-radius: 10px;
 
-    /* margin: 50px 100px 20px 20px; */
+    margin: 50px 100px 20px 20px;
   }
 
   .cal {
@@ -69,4 +69,29 @@
   color: rgb(57, 93, 95);
   font-size: 18px;
   font-weight: bold;
+}
+
+.year-month-date {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #3F72AF;
+}
+
+.todoInput{
+  display: flex;
+  padding: 20px;
+}
+.wtd{
+  border-right: none;
+  border-left: none;
+  border-top: none; 
+  border: 0 0 0 1px;
+  background-color: transparent;
+  margin: auto;
+  height: 1.25rem;
+}
+
+.todos li{
+list-style: none;
 }

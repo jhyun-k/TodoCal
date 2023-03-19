@@ -62,18 +62,15 @@ const renderCalendar = () => { //달력 보여주는 함수-------
       }
     }
   }
-
-  dates.forEach((date)=>{
-    date.addEventListener('click',()=>{
-      todoDate = date.innerText
-      console.log(todoDate)
-    })
-  })
+  
 
 };
 
 
 renderCalendar();
+const dateInner = document.querySelector('.date')
+console.log(dateInner)
+
 
 
 const prevMonth = () => {

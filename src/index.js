@@ -45,6 +45,10 @@ const renderCalendar = () => { //달력 보여주는 함수-------
   dates.forEach((date, i) => {
     const condition = i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other'; //date의 인덱스가 이번달 1일 인덱스보다 크거나 같고 막날 인덱스보다 작으면 이번달! 아니면 다른달! 다른달은 opacity 흐리게 해주기 위함
     dates[i] = `<div class="date"><span class=${condition}>${date}</span></div>`;
+    const dateInner = date;
+    console.log(dateInner)
+    dateInner.forEach((item)=>{console.log(item)})
+
   });
 
   document.querySelector('.dates').innerHTML = dates.join('');
@@ -68,8 +72,6 @@ const renderCalendar = () => { //달력 보여주는 함수-------
 
 
 renderCalendar();
-const dateInner = document.querySelector('.date')
-console.log(dateInner)
 
 
 

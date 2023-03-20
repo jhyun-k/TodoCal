@@ -1,67 +1,65 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body{
-    background-color: #fefef8;
-  }
-  header{
-    display: flex; 
-  }
-
-  main{
-    display: flex;
-
-  }
-  .weather{
-    width: 10vw;
-    background-color: #E8E8E8;
-    margin: 50px 20px 15px 100px;
-    border-radius: 10px;
-  }
-  .quote{
-    width: 90vw;
-    background-color: #E8E8E8;
-    border-radius: 10px;
-
-    margin: 50px 100px 20px 20px;
-  }
-
-  .cal {
-    width: 65vw;
-    margin: 20px 20px 40px 100px;
-    background-color: #DBE2EF;
-    padding: 30px;
-    border-radius: 10px;
-  }
-
-  .todo{
-    width: 30vw;
-    margin: 20px 100px 40px 20px;
-    background-color: #DBE2EF;
-    border-radius: 10px;
-  }
-  
-
-  .weather{
-    width: 10vw;
-    background-color: cadetblue;
-    height: 20vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.quote{
+body {
+  background-color: #fefef8;
+}
+header {
+  display: flex;
+}
+
+main {
+  display: flex;
+}
+.weather {
+  width: 10vw;
+  background-color: #e8e8e8;
+  margin: 50px 20px 15px 100px;
+  border-radius: 10px;
+}
+.quote {
+  width: 90vw;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+
+  margin: 50px 100px 20px 20px;
+}
+
+.cal {
+  width: 65vw;
+  margin: 20px 20px 40px 100px;
+  background-color: #dbe2ef;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.todo {
+  width: 30vw;
+  margin: 20px 100px 40px 20px;
+  background-color: #dbe2ef;
+  border-radius: 10px;
+}
+
+.weather {
+  width: 10vw;
+  background-color: cadetblue;
+  height: 20vh;
+}
+
+.quote {
   padding: 10px;
   width: 75rem;
   height: 20vh;
 }
 
-.quote h3{
+.quote h3 {
   color: cadetblue;
 }
 
-.quote p{
+.quote p {
   color: rgb(57, 93, 95);
   font-size: 18px;
   font-weight: bold;
@@ -71,23 +69,23 @@
   font-size: 30px;
   text-align: center;
   font-weight: bold;
-  color: #3F72AF;
+  color: #3f72af;
 }
 
-.todoInput{
+.todoInput {
   display: flex;
   padding: 20px;
 }
-.wtd{
+.wtd {
   border-right: none;
   border-left: none;
-  border-top: none; 
+  border-top: none;
   border: 0 0 0 1px;
   background-color: transparent;
   margin: auto;
   height: 1.25rem;
 }
 
-.todos li{
-list-style: none;
+.todos li {
+  list-style: none;
 }
